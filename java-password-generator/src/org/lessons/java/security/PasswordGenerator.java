@@ -7,6 +7,7 @@
 
 package org.lessons.java.security;
 
+import java.util.Random;
 import java.util.Scanner;
 
 public class PasswordGenerator {
@@ -40,6 +41,10 @@ public class PasswordGenerator {
 
         // elaborazione password
         int somma = giorno + mese + anno;
+        Random numeroRandom = new Random();
+        int max = 100000;
+        int risultato = numeroRandom.nextInt(max);
         System.out.println("La tua password personalizzata è: " + nome + "-" + cognome + "-" + colore + "-" + somma);
+        System.out.println("Vuoi una password più sicura? Puoi usare la seguente: " + nome + "-" + cognome + "-" + colore + "-" + somma + "-" + risultato);
     }
 }
